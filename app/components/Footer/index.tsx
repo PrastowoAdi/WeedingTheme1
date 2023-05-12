@@ -7,7 +7,7 @@ export function Footer() {
         <footer className="flex flex-col justify-center items-center sm:flex-row sm:justify-between bg-black w-full p-10 lg:px-28 lg:py-5 text-white">
           <div className="text-center pb-5 sm:text-left sm:pb-0">
             <h4 className="font-semibold">
-              Copyright&copy;2023. All rights are reserved
+              Copyright©2023. All rights are reserved
             </h4>
           </div>
           <div className="flex justify-center items-center gap-5">

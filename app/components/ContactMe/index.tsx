@@ -10,7 +10,7 @@ export function ContactMe() {
         >
           <div className="pb-10">
             <h6 className="font-bold text-sm text-amber-400">ContactMe</h6>
-            <h2 className="text-2xl font-bold">Dont'be shy! Hit me up 👇</h2>
+            <h2 className="text-2xl font-bold">Dont be shy! Hit me up 👇</h2>
           </div>
           <div className="flex flex-col md:flex-row gap-7">
             <div className="flex gap-3 md:justify-center items-center">
