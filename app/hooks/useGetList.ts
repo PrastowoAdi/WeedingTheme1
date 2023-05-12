@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import * as services from "../services";
+import { IApiResponseLandingList } from "../types";
 
 const useGetList = () => {
-  const data = useQuery<any>(
-    ["dailylist"],
+  const data = useQuery<IApiResponseLandingList>(
+    ["landinginfo-list"],
     async () => {
       const filter = {
         // paged: true,
@@ -13,7 +14,7 @@ const useGetList = () => {
       };
 
       const { data: axiosData } = await services.getList(filter);
-      return axiosData.data;
+      return axiosData;
     },
     { keepPreviousData: true }
   );

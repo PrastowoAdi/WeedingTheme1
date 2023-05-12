@@ -1,7 +1,7 @@
 import * as utils from "../utils/httpClient";
 
 export const getList = async (params: any) => {
-  return await utils.HttpClient.get(`/api/daily`, { params });
+  return await utils.HttpClient.get(`/api/myportfolio/landing`, { params });
 };
 
 export const addDaily = async (params: any) => {
