@@ -22,7 +22,7 @@ export function OurLoveStory() {
     return (
       <>
         <section
-          id="notes"
+          id="ourlovestory"
           className="flex flex-col items-center w-full pt-20 select-none px-7 lg:px-28"
         >
           <div className="flex flex-col w-full gap-2 text-center md:w-2/3">

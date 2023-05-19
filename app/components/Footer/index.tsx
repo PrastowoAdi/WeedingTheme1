@@ -5,7 +5,7 @@ export function Footer() {
   const renderMain = useMemo(() => {
     return (
       <>
-        <footer className="relative flex flex-row justify-center items-center bg-[#9AA977]/60 w-full p-5 lg:px-28 lg:py-5 text-white gap-2 -z-50">
+        <footer className="relative flex flex-row justify-center items-center bg-[#9AA977]/60 w-full p-5 pb-24 lg:px-28 lg:py-5 lg:pb-24 text-white gap-2 -z-50">
           <div className="absolute bottom-0 left-0 hidden md:block">
             <Image
               src="/assets/left.svg"
@@ -28,8 +28,8 @@ export function Footer() {
             <Image
               src="/assets/left.svg"
               alt="notes-img"
-              width={160}
-              height={160}
+              width={180}
+              height={180}
               className=""
             />
           </div>
@@ -42,7 +42,7 @@ export function Footer() {
               // className="mx-auto"
             />
           </div>
-          <div className="">
+          <div className="z-50">
             <h5 className="text-sm font-semibold uppercase">InvitationMore</h5>
             <h6 className="text-xs">Website Undangan Online</h6>
           </div>

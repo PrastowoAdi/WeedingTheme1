@@ -17,7 +17,7 @@ export function ShareLove() {
     return (
       <>
         <section
-          id="notes"
+          id="sharelove"
           className="flex flex-col items-center w-full pt-16 select-none px-7 lg:px-28 lg:pt-24 lg:pb-28 bg-[#9AA977]/60 text-white"
         >
           <div className="flex flex-col w-full gap-2 text-center md:w-2/3">

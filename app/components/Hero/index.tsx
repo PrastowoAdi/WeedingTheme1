@@ -9,7 +9,7 @@ const gabriela = Gabriela({
 export function Hero() {
   const renderMain = useMemo(() => {
     return (
-      <header className={`${gabriela.className}`}>
+      <header className={`${gabriela.className}`} id="hero">
         <div
           className="w-full bg-no-repeat bg-center lg:bg-[center_top_-23rem] bg-cover"
           style={{

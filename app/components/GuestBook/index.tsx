@@ -17,7 +17,7 @@ export function GuestBook() {
     return (
       <>
         <section
-          id="notes"
+          id="guestbook"
           className="flex flex-col items-center w-full pt-20 pb-32 select-none px-7 lg:px-28"
         >
           <div className="flex flex-col w-full gap-2 pb-16 text-center md:w-2/3">
