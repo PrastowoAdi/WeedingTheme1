@@ -1,8 +1,25 @@
+import WelcomeInvitation from "./WelcomeInvitation";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
-import AboutMe from "./AboutMe";
-import Portfolio from "./Portfolio";
-import ContactMe from "./ContactMe";
+import Notes from "./Notes";
+import BrideGroom from "./BrideGroom";
+import CountdownDay from "./CountdownDay";
+import OurLoveStory from "./OurLoveStory";
+import OurMoment from "./OurMoment";
+import ShareLove from "./ShareLove";
+import GuestBook from "./GuestBook";
 import Footer from "./Footer";
 
-export { Navbar, Hero, AboutMe, Portfolio, ContactMe, Footer };
+export {
+  WelcomeInvitation,
+  Navbar,
+  Hero,
+  Notes,
+  BrideGroom,
+  CountdownDay,
+  OurLoveStory,
+  OurMoment,
+  ShareLove,
+  GuestBook,
+  Footer,
+};
