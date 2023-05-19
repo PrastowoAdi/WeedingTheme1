@@ -16,7 +16,7 @@ export function Hero() {
             backgroundImage: "url(/assets/img1.jpg)",
           }}
         >
-          <div className="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50 py-80 md:py-[23rem]">
+          <div className="flex items-center justify-center w-full h-full bg-black/50 py-80 md:py-[23rem]">
             <div className="text-center lg:-mt-10">
               <span className="text-gray-200 uppercase tracking-[0.4rem]">
                 Pernikahan
