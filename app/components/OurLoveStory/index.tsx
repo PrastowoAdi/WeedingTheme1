@@ -47,12 +47,12 @@ export function OurLoveStory() {
 
           <div className="relative pt-16 overflow-auto pb-28">
             <div className="max-w-xs min-w-0 mx-auto md:max-w-3xl lg:max-w-5xl">
-              <div className="flex gap-2 overflow-x-auto">
+              <div className="overscroll-auto flex gap-2 overflow-x-auto scrollbar-thin scrollbar-thumb-[#9AA977]/60 scrollbar-track-[#9AA977]/30">
                 {Array(5)
                   .fill(undefined)
                   .map((i: any, idx: number) => (
                     <div
-                      className="flex-none w-full px-3 py-6 border-b-2 md:border-b-0 md:w-5/6 rounded-b-3xl"
+                      className="flex-none w-[85%] px-3 py-6 border-b-2 md:border-b-0 md:w-5/6 rounded-b-3xl"
                       key={idx}
                     >
                       <div className="flex flex-col items-center justify-center gap-3 md:flex-row">

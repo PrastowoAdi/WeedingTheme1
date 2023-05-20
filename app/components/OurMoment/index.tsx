@@ -1,7 +1,13 @@
 import React, { useMemo } from "react";
 
 import { Mr_De_Haviland, Gabriela } from "next/font/google";
-import Image from "next/image";
+
+import LightGallery from "lightgallery/react";
+
+// import plugins if you need
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+import ImageItem from "./ImageItem";
 
 const mrDehaviland = Mr_De_Haviland({
   weight: "400",
@@ -46,89 +52,21 @@ export function OurMoment() {
               </p>
             </div>
           </div>
-          <div className="grid w-full grid-cols-3 gap-3 py-10 md:w-4/5 lg:w-3/4 md:px-10 lg:px-16">
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img3.jpg"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img8.jpg"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img4.jpg"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img7.jpg"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img2.jpg"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img9.jpg"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img5.jpg"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img10.jpg"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-            <div className="shadow-lg">
-              <Image
-                src="/assets/img6new.png"
-                alt="notes-img"
-                width={350}
-                height={350}
-                className="rounded-md"
-              />
-            </div>
-          </div>
+          <LightGallery
+            speed={500}
+            plugins={[lgThumbnail, lgZoom]}
+            elementClassNames="grid w-full grid-cols-3 gap-3 py-10 md:w-4/5 lg:w-3/4 md:px-10 lg:px-16"
+          >
+            <ImageItem src="/assets/img3.jpg" alt="Our Moment" />
+            <ImageItem src="/assets/img8.jpg" alt="Our Moment" />
+            <ImageItem src="/assets/img4.jpg" alt="Our Moment" />
+            <ImageItem src="/assets/img7.jpg" alt="Our Moment" />
+            <ImageItem src="/assets/img2.jpg" alt="Our Moment" />
+            <ImageItem src="/assets/img9.jpg" alt="Our Moment" />
+            <ImageItem src="/assets/img5.jpg" alt="Our Moment" />
+            <ImageItem src="/assets/img10.jpg" alt="Our Moment" />
+            <ImageItem src="/assets/img6new.png" alt="Our Moment" />
+          </LightGallery>
         </section>
       </>
     );

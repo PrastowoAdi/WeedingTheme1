@@ -59,7 +59,7 @@ export default function Home() {
           <ShareLove />
           <GuestBook />
           <Footer />
-          <div className="absolute z-50 bottom-20 md:bottom-5 right-5">
+          <div className="fixed z-50 bottom-28 md:bottom-5 right-5">
             <button
               className="p-2 text-black bg-white rounded-full shadow-lg"
               onClick={togglePlaying}

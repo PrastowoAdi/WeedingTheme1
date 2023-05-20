@@ -100,10 +100,8 @@ export function CountdownDay() {
                     />
                   </div>
                   <div className="text-[#9AA977]/80 p-1 text-left">
-                    <h3 className={`${mrDehaviland.className} text-4xl`}>
-                      Akad
-                    </h3>
-                    <h5 className={`text-sm -mt-2`}>Hotel Marriot</h5>
+                    <h3 className={`${gabriela.className} text-xl`}>Akad</h3>
+                    <h5 className={`text-sm`}>Hotel Marriot</h5>
                   </div>
                 </div>
                 <div className="flex gap-3 text-[#9AA977]/80 mt-5 items-center">
@@ -163,10 +161,10 @@ export function CountdownDay() {
                     />
                   </div>
                   <div className="text-[#9AA977]/80 p-1 text-left">
-                    <h3 className={`${mrDehaviland.className} text-4xl`}>
+                    <h3 className={`${gabriela.className} text-xl`}>
                       Resepsi Pernikahan
                     </h3>
-                    <h5 className={`text-sm -mt-2`}>Hotel Marriot</h5>
+                    <h5 className={`text-sm`}>Hotel Marriot</h5>
                   </div>
                 </div>
                 <div className="flex gap-3 text-[#9AA977]/80 mt-5 items-center">
