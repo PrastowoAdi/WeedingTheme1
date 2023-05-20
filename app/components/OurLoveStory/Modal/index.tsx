@@ -9,7 +9,7 @@ export function Modal(props: IProps) {
   const renderMain = useMemo(() => {
     return (
       <div
-        className={`relative z-10 ${modalOpen ? "block" : "hidden"}`}
+        className={`relative z-50 ${modalOpen ? "block" : "hidden"}`}
         aria-labelledby="modal-title"
         role="dialog"
         aria-modal="true"
