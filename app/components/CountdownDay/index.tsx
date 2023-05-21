@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 
 import { Mr_De_Haviland, Gabriela } from "next/font/google";
 import Image from "next/image";
+import CountdownTimer from "./CountdownTimer";
 
 const mrDehaviland = Mr_De_Haviland({
   weight: "400",
@@ -13,12 +14,14 @@ const gabriela = Gabriela({
 });
 
 export function CountdownDay() {
+  const weedingDate = new Date("2023-06-21T00:00:00.147712+07:00").getTime();
+
   const renderMain = useMemo(() => {
     return (
       <>
         <section
           id="countdownday"
-          className={`${gabriela.className} flex flex-col items-center w-full pt-10 select-none px-7 lg:px-28 lg:pb-28 bg-[#9AA977]/60 text-white pb-28`}
+          className={`${gabriela.className} flex flex-col items-center w-full pt-10 px-7 lg:px-28 lg:pb-28 bg-[#9AA977]/60 text-white pb-28`}
         >
           <div className="flex flex-col w-full gap-2 text-center md:w-2/3">
             <div className="">
@@ -41,24 +44,7 @@ export function CountdownDay() {
             </p>
 
             {/* Countdown Time */}
-            <div className="flex flex-row justify-center w-full pb-20 text-2xl gap-7 md:text-4xl md:gap-28 mt-7">
-              <div className="">
-                <h3>265</h3>
-                <h5 className="text-sm">Days</h5>
-              </div>
-              <div className="">
-                <h3>23</h3>
-                <h5 className="text-sm">Hours</h5>
-              </div>
-              <div className="">
-                <h3>10</h3>
-                <h5 className="text-sm">Minutes</h5>
-              </div>
-              <div className="">
-                <h3>10</h3>
-                <h5 className="text-sm">Seconds</h5>
-              </div>
-            </div>
+            <CountdownTimer targetDate={weedingDate} />
 
             {/* Wedding Information */}
             <div className="w-full h-full bg-white rounded-tl-full rounded-tr-full shadow-lg lg:w-3/4 md:mx-auto">
@@ -238,7 +224,7 @@ export function CountdownDay() {
         </section>
       </>
     );
-  }, []);
+  }, [weedingDate]);
 
   return renderMain;
 }

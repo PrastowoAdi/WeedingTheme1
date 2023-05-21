@@ -1,16 +1,7 @@
 import React, { useMemo } from "react";
 
-import { Mr_De_Haviland, Gabriela } from "next/font/google";
-import Image from "next/image";
-
-const mrDehaviland = Mr_De_Haviland({
-  weight: "400",
-  subsets: ["latin"],
-});
-const gabriela = Gabriela({
-  weight: "400",
-  subsets: ["latin"],
-});
+import NotesItem from "./NotesItem";
+import SectionTitle from "../SectionTitle";
 
 export function Notes() {
   const renderMain = useMemo(() => {
@@ -18,53 +9,41 @@ export function Notes() {
       <>
         <section
           id="notes"
-          className="flex flex-col items-center w-full pt-20 select-none px-7 lg:px-28 lg:pt-28"
+          className="flex flex-col items-center w-full pt-20 px-7 lg:px-28 lg:pt-28"
         >
-          <div className="flex flex-col w-full gap-2 text-center md:w-2/3">
-            <h4 className={`${mrDehaviland.className} text-5xl md:text-6xl`}>
-              Notes
-            </h4>
-            <div className="">
-              <h5
-                className={`${gabriela.className} text-lg font-semibold mb-2`}
-              >
-                Lorem ipsum dolor sit?
-              </h5>
-              <p className="text-sm font-light lg:px-20">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                tempore nemo cumque laboriosam, eaque quo!
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 gap-5 py-16 md:grid-cols-2 md:px-20">
-            {Array(4)
-              .fill(undefined)
-              .map((e: any, idx: number) => (
-                <div
-                  className="flex flex-col items-center justify-center gap-5 md:text-center"
-                  key={idx}
-                >
-                  <div className="hidden md:block">
-                    <Image
-                      src="/assets/washing-hand.png"
-                      alt="notes-img"
-                      width={100}
-                      height={100}
-                      className="w-1/2 mx-auto rounded-md shadow-lg"
-                    />
-                  </div>
-                  <div className="md:px-3 lg:px-10 md:pb-10">
-                    <h5 className="mb-2 text-sm font-semibold tracking-wide">
-                      Lorem ipsum dolor sit?
-                    </h5>
-                    <p className="text-sm font-light">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestiae perspiciatis eligendi enim obcaecati alias, nam
-                      optio ratione distinctio repellat dignissimos.
-                    </p>
-                  </div>
-                </div>
-              ))}
+          <SectionTitle
+            title="Notes"
+            withTitleDesc
+            titleDesc="Protokol Kesehatan"
+            desc="Dalam upaya mengurangi penyebaran Covid 19 pada masa pandemi,
+          kami harapkan kedatangan para tamu undangan agar menjalankan
+          protokol yang berlaku."
+          />
+          <div className="grid grid-cols-1 gap-5 py-20 md:grid-cols-2 md:px-20">
+            <NotesItem
+              src="/assets/notes2.png"
+              alt="notes-img"
+              title="Wajib Menggunakan Masker"
+              desc="Masker merupakan penghalang sederhana yang bisa membantu mencegah percikan pernapasan yang berisi virus dari orang lain masuk ke dalam tubuh kamu."
+            />
+            <NotesItem
+              src="/assets/washing-hand.png"
+              alt="notes-img"
+              title="Mencuci Tangan dan Memakai Handsanitizer"
+              desc="Mencuci tangan merupakan gaya hidup sehat yang tentunya bisa melindungi dari beragam penyakit-penyakit dan untuk lebih menjaga kebersihan bisa menggunakan Handsanitizer."
+            />
+            <NotesItem
+              src="/assets/hands.png"
+              alt="notes-img"
+              title="Menggunakan salam namastee sebagai ganti berjabat tangan"
+              desc="Salam Namaste merupakan gestur tubuh mengatupkan kedua telapak tangan di dada, yang merupakan simbol penghormatan terhadap seseorang yang dijumpai."
+            />
+            <NotesItem
+              src="/assets/social-distancing.png"
+              alt="notes-img"
+              title="Saling Menjaga Jarak di Dalam Acara"
+              desc="Dengan menjaga jarak, kemungkinan kamu menghirup tetesan dan bersentuhan dengan permukaan yang terkontaminasi dan orang yang terinfeksi di luar rumah pun turut berkurang."
+            />
           </div>
         </section>
       </>

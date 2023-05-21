@@ -10,6 +10,8 @@ import ShareLove from "./ShareLove";
 import GuestBook from "./GuestBook";
 import Footer from "./Footer";
 
+import SectionTitle from "./SectionTitle";
+
 export {
   WelcomeInvitation,
   Navbar,
@@ -22,4 +24,5 @@ export {
   ShareLove,
   GuestBook,
   Footer,
+  SectionTitle,
 };

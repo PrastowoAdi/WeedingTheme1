@@ -1,7 +1,5 @@
 import React, { useMemo } from "react";
 
-import { Mr_De_Haviland, Gabriela } from "next/font/google";
-
 import LightGallery from "lightgallery/react";
 
 // import styles
@@ -13,15 +11,7 @@ import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import ImageItem from "./ImageItem";
-
-const mrDehaviland = Mr_De_Haviland({
-  weight: "400",
-  subsets: ["latin"],
-});
-const gabriela = Gabriela({
-  weight: "400",
-  subsets: ["latin"],
-});
+import SectionTitle from "../SectionTitle";
 
 export function OurMoment() {
   const renderMain = useMemo(() => {
@@ -29,34 +19,16 @@ export function OurMoment() {
       <>
         <section
           id="notes"
-          className="flex flex-col items-center w-full pt-5 pb-20 select-none px-7 lg:px-28 lg:pb-28"
+          className="flex flex-col items-center w-full pt-5 pb-20 px-7 lg:px-28 lg:pb-28"
         >
-          <div className="flex flex-col w-full gap-2 text-center md:w-2/3">
-            {/* <div className="">
-              <Image
-                src="/assets/sectionimg.svg"
-                alt="notes-img"
-                width={150}
-                height={150}
-                className="mx-auto"
-              />
-            </div> */}
-            <h4 className={`${mrDehaviland.className} text-5xl md:text-6xl`}>
-              Our Moment
-            </h4>
-            <div className="">
-              <h5
-                className={`${gabriela.className} text-lg font-semibold mb-2`}
-              >
-                Lorem ipsum dolor sit?
-              </h5>
-              <p className="text-sm font-light lg:px-20">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                laborum voluptatum animi rerum alias nulla architecto unde
-                asperiores accusamus doloremque?
-              </p>
-            </div>
-          </div>
+          <SectionTitle
+            withTitleDesc
+            title="Our Moment"
+            titleDesc="A Glimpse of"
+            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            laborum voluptatum animi rerum alias nulla architecto unde
+            asperiores accusamus doloremque?"
+          />
           <LightGallery
             speed={500}
             plugins={[lgThumbnail, lgZoom]}

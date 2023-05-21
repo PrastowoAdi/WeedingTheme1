@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 
 import { Mr_De_Haviland, Gabriela } from "next/font/google";
 import Image from "next/image";
+import SectionTitle from "../SectionTitle";
 
 const mrDehaviland = Mr_De_Haviland({
   weight: "400",
@@ -18,29 +19,15 @@ export function ShareLove() {
       <>
         <section
           id="sharelove"
-          className="flex flex-col items-center w-full pt-16 select-none px-7 lg:px-28 lg:pt-24 lg:pb-28 bg-[#9AA977]/60 text-white"
+          className="flex flex-col items-center w-full pt-16 px-7 lg:px-28 lg:pt-24 lg:pb-28 bg-[#9AA977]/60 text-white"
         >
-          <div className="flex flex-col w-full gap-2 text-center md:w-2/3">
-            {/* <div className="">
-              <Image
-                src="/assets/sectionimg.svg"
-                alt="notes-img"
-                width={150}
-                height={150}
-                className="mx-auto"
-              />
-            </div> */}
-            <h4 className={`${mrDehaviland.className} text-5xl md:text-6xl`}>
-              Share Love
-            </h4>
-            <div className="">
-              <p className="text-base font-light lg:px-20">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ea
-                similique voluptatem itaque, a excepturi omnis inventore aliquam
-                exercitationem corporis rerum soluta.
-              </p>
-            </div>
-          </div>
+          <SectionTitle
+            title="Share Love"
+            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ea
+          similique voluptatem itaque, a excepturi omnis inventore aliquam
+          exercitationem corporis rerum soluta."
+            textWhite
+          />
 
           {/* Account Bank */}
           <div className="grid w-full grid-cols-1 gap-5 py-10 md:w-5/6 md:grid-cols-2">

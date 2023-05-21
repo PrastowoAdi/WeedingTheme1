@@ -1,16 +1,6 @@
 import React, { useMemo } from "react";
 
-import { Mr_De_Haviland, Gabriela } from "next/font/google";
-import Image from "next/image";
-
-const mrDehaviland = Mr_De_Haviland({
-  weight: "400",
-  subsets: ["latin"],
-});
-const gabriela = Gabriela({
-  weight: "400",
-  subsets: ["latin"],
-});
+import SectionTitle from "../SectionTitle";
 
 export function GuestBook() {
   const renderMain = useMemo(() => {
@@ -20,26 +10,15 @@ export function GuestBook() {
           id="guestbook"
           className="flex flex-col items-center w-full pt-20 pb-32 select-none px-7 lg:px-28"
         >
-          <div className="flex flex-col w-full gap-2 pb-16 text-center md:w-2/3">
-            <div className="">
-              <Image
-                src="/assets/sectionimg.svg"
-                alt="notes-img"
-                width={150}
-                height={150}
-                className="mx-auto"
-              />
-            </div>
-            <h4 className={`${mrDehaviland.className} text-5xl md:text-6xl`}>
-              Guest Book
-            </h4>
-            <p className="text-sm font-light lg:px-20">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              laborum voluptatum animi rerum alias nulla architecto unde
-              asperiores accusamus doloremque?
-            </p>
-          </div>
-          <form className="w-full p-5 md:p-16 bg-[#9AA977]/60 rounded-md md:w-2/3 lg:w-1/2 shadow-md ">
+          <SectionTitle
+            withImg
+            title="Guest Book"
+            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+          laborum voluptatum animi rerum alias nulla architecto unde
+          asperiores accusamus doloremque?"
+          />
+
+          <form className="w-full p-5 mt-10 md:p-16 bg-[#9AA977]/60 rounded-md md:w-2/3 lg:w-1/2 shadow-md ">
             <div className="mb-4">
               <label className="block mb-1 font-semibold text-white">
                 Nama

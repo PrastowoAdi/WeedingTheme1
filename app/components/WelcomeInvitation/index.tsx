@@ -1,12 +1,8 @@
 import React, { useMemo } from "react";
 
-import { Mr_De_Haviland, Gabriela } from "next/font/google";
+import { Gabriela } from "next/font/google";
 import Image from "next/image";
 
-const mrDehaviland = Mr_De_Haviland({
-  weight: "400",
-  subsets: ["latin"],
-});
 const gabriela = Gabriela({
   weight: "400",
   subsets: ["latin"],
